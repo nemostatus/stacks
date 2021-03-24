@@ -24,13 +24,19 @@ peek(){
 }
 
 isEmpty(){
-    console.log(this.count ==0 ? "Stack is empty": `Stack has ${this.count} elements`)
+    console.log(this.count ==0 ? "Stack is empty": `Stack is NOT empty`)
     return this.count ==0
+}
+
+size(){
+    console.log(`${this.count} elements in stack`)
+    return this.count
 }
 }
 
 const stack = new Stack()
 stack.push(100)
+stack.size()
 stack.push(200)
 stack.peek()
 stack.push(300)
