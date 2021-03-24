@@ -32,6 +32,14 @@ size(){
     console.log(`${this.count} elements in stack`)
     return this.count
 }
+
+print(){
+    let str = ''
+    for(let i = 0;i<this.count;i++){
+str += this.items[i] + ' '
+    }
+    return str
+}
 }
 
 const stack = new Stack()
@@ -40,8 +48,10 @@ stack.size()
 stack.push(200)
 stack.peek()
 stack.push(300)
+console.log(stack.print())
 stack.isEmpty()
 stack.pop()
 stack.pop()
+console.log(stack.print())
 stack.pop()
 stack.isEmpty()
