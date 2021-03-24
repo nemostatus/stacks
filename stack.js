@@ -40,7 +40,13 @@ str += this.items[i] + ' '
     }
     return str
 }
-}
+
+clear(){
+this.items = 0
+this.count = 0
+console.log("stack cleared")
+return this.items
+}}
 
 const stack = new Stack()
 stack.push(100)
@@ -48,6 +54,7 @@ stack.size()
 stack.push(200)
 stack.peek()
 stack.push(300)
+stack.clear()
 console.log(stack.print())
 stack.isEmpty()
 stack.pop()
